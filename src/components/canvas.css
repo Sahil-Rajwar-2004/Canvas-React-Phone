@@ -1,0 +1,53 @@
+#draw{
+    border: 1px solid dodgerblue;
+    background-color: white;
+    color: black;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.heading{
+    font-family: monospace;
+    font-weight: bolder;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.heading h1{
+    user-select: none;
+}
+
+.heading::after,
+.heading::before {
+    content: "";
+    top: 95%;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    transition: right 0.3s ease-in-out;
+}
+
+.heading::after {
+    position: absolute;
+    background-color: lightcoral;
+}
+
+.heading:hover::after {
+    right: 0;
+}
+
+#eraseBtn,#saveBtn{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    border: 0;
+    border-radius: 5px;
+    color: dodgerblue;
+    background-color: #242424;
+}
